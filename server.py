@@ -1,4 +1,4 @@
-from flask import Flask,request, send_from_directory
+from flask import Flask,request, send_from_directory, make_response, jsonify
 from flask_cors import CORS
 from questions import generate_questions
 from roadmap import generate_roadmap_info
@@ -26,7 +26,7 @@ def roadmap_info_route():
 def questions_route():
   url = request.args.get('url')
   questions = generate_questions(url)
-  return questions
+  return { 'questions': questions }
 
 
 if __name__ == '__main__':
