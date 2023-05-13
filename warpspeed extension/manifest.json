@@ -11,8 +11,8 @@
   "content_scripts": [
     {
       "matches": ["https://www.youtube.com/*"],
-      "js": ["youtube.js"],
-      "css": ["popup_styles.css"]
+      "js": ["youtube.js", "quiz.js"],
+      "css": ["popup_styles.css", "quiz.css"]
     }
   ]
 }
