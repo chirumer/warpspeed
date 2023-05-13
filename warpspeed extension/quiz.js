@@ -62,7 +62,7 @@ function result_btn(btn) {
   })
 }
 
-function exit_btn(btn) {
+function replay_btn(btn) {
   btn.addEventListener('click', () => {
     replay();
   })
@@ -70,7 +70,7 @@ function exit_btn(btn) {
 
 wait_for('#start_quiz_btn').then(start_btn);
 wait_for('#result_btn').then(result_btn);
-wait_for('#exit_btn').then(exit_btn);
+wait_for('#replay_btn').then(replay_btn);
 
 let question = [
   {
