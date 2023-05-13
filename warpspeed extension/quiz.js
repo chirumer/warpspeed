@@ -172,7 +172,9 @@ async function startQuiz() {
   container.classList.remove("hide");
   interval = setInterval(timer, 1000);
 
+  queBox.innerHTML = '<h1>Generating Questions..</h1>'
   question = await get_questions();
+  queBox.innerHTML = ''
 
   index = 0;
   timeLimit = question.length * eachTime;
