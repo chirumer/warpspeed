@@ -22,12 +22,10 @@ const quiz_container = document.createElement('div');
 quiz_container.setAttribute('id', 'quiz_container');
 quiz_container.style.opacity = 1.0;
 quiz_container.innerHTML = `
-<div class="starter">
-<!-- <span onclick="document.getElementById('quiz_container').style.display='none'" class="close">&times;</span> -->
-<button id="start_quiz_btn">Start</button>
+<div class="starter hide">
+  <button>Start</button>
 </div>
 <div class="container hide">
-
 <!-- <span onclick="document.getElementById('quiz_container').style.display='none'" class="close">&times;</span> -->
 <header>
   <p>Quiz</p>
@@ -44,7 +42,7 @@ quiz_container.innerHTML = `
 </div>
 <div class="button-box">
   <button id="result_btn" onclick="">See Reullt</button>
-  <button id="replay_btn" onclick="">Replay Quiz</button>
+  <button id="replay_btn" onclick=""> Close </button>
 </div>
 </div>
 `;
@@ -52,6 +50,9 @@ document.body.appendChild(quiz_container);
 
 function start_btn(btn) {
   btn.addEventListener('click', () => {
+    // console.log(startBox);
+    // startBox.classList.remove("hide");
+    document.getElementById('popup_container').remove();
     startQuiz();
   })
 }
@@ -68,7 +69,7 @@ function replay_btn(btn) {
   })
 }
 
-wait_for('#start_quiz_btn').then(start_btn);
+wait_for('#acceptBtn').then(start_btn);
 wait_for('#result_btn').then(result_btn);
 wait_for('#replay_btn').then(replay_btn);
 
@@ -203,7 +204,7 @@ function replay() {
   clearInterval(interval);
   interval = setInterval(timer, 1000);
 
-  container.classList.remove("hide");
+  // container.classList.remove("hide");
   resultBox.classList.add("hide");
   nextBtn.classList.remove("hide");
   finishBtn.classList.add("hide");

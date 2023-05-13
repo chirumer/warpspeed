@@ -20,7 +20,6 @@ function wait_for(selector) {
 
 function gradual_brighten(popup_container) {
   opacity = parseFloat(popup_container.style.opacity) + 0.01
-  console.log(opacity);
   if (opacity >= 1.0) {
     gradual_brighten.opacity = 1.0;
     return;
@@ -60,9 +59,6 @@ async function video_ended() {
   (await wait_for('#declineBtn')).addEventListener('click', () => {
     popup_container.remove();
   });
-  document.getElementById('acceptBtn').addEventListener('click', () => {
-    window.location.replace('http://127.0.0.1:8250/play_game?' + new URLSearchParams({ url: window.location.href }).toString());
-  })
 }
 
 wait_for('.ytp-endscreen-content > .ytp-videowall-still').then(video_ended);
