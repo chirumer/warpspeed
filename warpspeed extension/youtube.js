@@ -43,12 +43,12 @@ async function video_ended() {
     </header>
 
     <div class="data">
-      <p>Play a small game to test your understanding of the video!</p>
+      <p>Take a quiz based on the concepts in the video?</p>
     </div>
 
     <div class="buttons">
-      <button class="button" id="acceptBtn">Play!</button>
-      <button class="button" id="declineBtn">No Thanks</button>
+      <button class="button" id="acceptBtn">Yes</button>
+      <button class="button" id="declineBtn">No</button>
     </div>
   </div>
   `;
