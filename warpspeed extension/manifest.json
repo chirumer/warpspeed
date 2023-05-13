@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "TestMe",
+  "version": "1.0.1",
+  "icons": {
+    "16": "icon.ico",
+    "32": "icon.ico",
+    "48": "icon.ico",
+    "128": "icon.ico"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["youtube.js"],
+      "css": ["popup_styles.css"]
+    }
+  ]
+}

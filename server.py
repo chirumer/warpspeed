@@ -10,7 +10,7 @@ CORS(app)
 
 @app.route('/')
 def home_route():
-  return send_from_directory('views', 'home.html')
+  return 'server active'
 
 @app.route('/roadmap')
 def roadmap_route():
