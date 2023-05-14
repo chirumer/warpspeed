@@ -8,6 +8,10 @@
     "48": "icons/icon48.ico",
     "128": "icons/icon128.ico"
   },
+  "action": {
+    "default_popup": "search.html",
+    "default_icon":"icon.png"
+  },
   "content_scripts": [
     {
       "matches": ["https://www.youtube.com/*"],
