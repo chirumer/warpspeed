@@ -149,7 +149,8 @@ function redrawLevel2(i, angle, preparation) {
             $("#elem" + i + "child" + j).click(function() {
               // no click for hidden elements!
               if (!$(this).hasClass("hiddenLevel2"))
-                alert($(this).html());
+                // alert($(this).html());
+                window.open($(this).children('a').attr('href'));
             });
             createLineFromTo("#elem" + i, "#elem" + i + "child" + j, "#line" + i + "child" + j);
           }
