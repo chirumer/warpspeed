@@ -182,8 +182,8 @@ async function generate_html() {
       }
       level++;
     }
-
-  ht = htlevel + htchild
+  topic =  (new URLSearchParams(window.location.search)).get('topic')
+  ht = `<div id="main" class="level0 elem">${topic}</div>` +  htlevel + htchild
 
   console.log(ht);
 
